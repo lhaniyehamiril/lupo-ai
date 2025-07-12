@@ -44,7 +44,7 @@ export const Chat: React.FC<ChatProps> = ({ message }) => {
   }, [message, isPending]);
 
   return (
-    <div className="md:w-[55%] md:h-[29rem] h-[32rem] overflow-y-scroll no-scrollbar">
+    <div className="md:w-[55%] md:h-[28rem] h-[31rem] overflow-y-scroll no-scrollbar">
       <div
         className={`flex gap-3 flex-col px-5  sm:px-10 md:px-3 mb-20 ${
           isError ? "justify-center items-center p-0" : ""

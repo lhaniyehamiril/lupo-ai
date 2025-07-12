@@ -63,7 +63,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           placeholder="Ask anything"
-          minRows={1}
+          minRows={1.3}
           maxRows={8}
           className="w-full p-5 no-scrollbar placeholder:text-[1.1rem] leading-relaxed resize-none overflow-y-auto bg-[#eee] focus:outline-none text-[#333] rounded-3xl"
         />
