@@ -27,6 +27,7 @@ export const Chat: React.FC<ChatProps> = ({ message }) => {
   // Auto-scroll to loader on loading, last message when done
   const lastMessageRef = useRef<HTMLDivElement>(null);
   const loaderRef = useRef<HTMLDivElement>(null);
+  const errorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const element =
@@ -36,10 +37,14 @@ export const Chat: React.FC<ChatProps> = ({ message }) => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "end" });
     }
+
+    if (errorRef.current) {
+      errorRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
+    }
   }, [message, isPending]);
 
   return (
-    <div className="md:w-[55%] md:h-[29rem] md:overflow-y-scroll no-scrollbar">
+    <div className="md:w-[55%] md:h-[29rem] h-[32rem] overflow-y-scroll no-scrollbar">
       <div
         className={`flex gap-3 flex-col px-5  sm:px-10 md:px-3 mb-20 ${
           isError ? "justify-center items-center p-0" : ""
@@ -70,7 +75,7 @@ export const Chat: React.FC<ChatProps> = ({ message }) => {
         <div ref={loaderRef} className="mr-auto">
           {isPending ? <Loader /> : ""}
         </div>
-        {isError && <BoxError />}
+        <div ref={errorRef}>{isError && <BoxError />}</div>
       </div>
     </div>
   );

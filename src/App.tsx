@@ -10,7 +10,7 @@ const App = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [show, setShow] = useState(true);
   return (
-    <div className="mt-10 pb-10 md:overflow-hidden">
+    <div className="mt-10 pb-10 md:overflow-hidden font-bold">
       {show && <Summary />}
       <div className="md:flex md:justify-center md:items-center">
         {messages.length > 0 && <Chat message={messages} />}
