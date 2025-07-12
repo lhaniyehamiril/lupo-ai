@@ -62,7 +62,7 @@ export const Chat: React.FC<ChatProps> = ({ message }) => {
                 ? "w-[250px] md:w-[320px] max-[300px]:w-full"
                 : ""
             }
-            rounded-[1.2rem] py-3 px-5 leading-relaxed`}
+            rounded-[1.2rem] py-3 px-5 leading-relaxed break-words`}
           >
             <ReactMarkdown>{msg.content}</ReactMarkdown>
           </motion.div>
