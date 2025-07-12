@@ -5,7 +5,7 @@ export const Summary = () => {
     <div className="flex items-center justify-center h-[60vh]">
       <div className="flex justify-center items-center">
         <Logo />
-        <h2 className="mt-5 font-bold -translate-x-3 text-xl text-gray-500">
+        <h2 className="mt-5 font-bold -translate-x-3 text-[1.3rem] text-gray-500">
           say something
         </h2>
       </div>

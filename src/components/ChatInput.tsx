@@ -55,7 +55,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
         onSubmit={handleSubmit}
         className={`relative w-full md:w-[55%] border-top outline-white outline-10 ${
           prompt.length > 39 ? "pb-13 md:pb-10 bg-[#eee]" : "pb-0 bg-white pt-2"
-        } rounded-4xl flex justify-center items-center`}
+        } rounded-3xl flex justify-center items-center`}
       >
         <TextareaAutosize
           disabled={isPending}
@@ -65,7 +65,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
           placeholder="Ask anything"
           minRows={1}
           maxRows={8}
-          className="w-full p-5 no-scrollbar  leading-relaxed resize-none overflow-y-auto bg-[#eee] focus:outline-none text-[#333] rounded-[1.2rem]"
+          className="w-full p-5 no-scrollbar placeholder:text-[1.1rem] leading-relaxed resize-none overflow-y-auto bg-[#eee] focus:outline-none text-[#333] rounded-3xl"
         />
         <button
           className={`${
