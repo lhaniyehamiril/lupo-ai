@@ -50,10 +50,10 @@ export const ChatInput: React.FC<ChatInputProps> = ({
   };
 
   return (
-    <div className="flex items-center justify-center w-full fixed bottom-0  md:bottom-12 z-[1000]">
+    <div className="flex items-center justify-center w-full fixed bottom-5  md:bottom-12 z-[1000]">
       <form
         onSubmit={handleSubmit}
-        className={`relative w-full md:w-[55%] border-top outline-white outline-10 ${
+        className={`relative w-[89%] md:w-[55%] border-top outline-white outline-10 ${
           prompt.length > 39 ? "pb-13 md:pb-10 bg-[#eee]" : "pb-0 bg-white pt-2"
         } rounded-3xl flex justify-center items-center`}
       >
@@ -63,7 +63,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           placeholder="Ask anything"
-          minRows={1.3}
+          minRows={1}
           maxRows={8}
           className="w-full p-5 no-scrollbar placeholder:text-[1.1rem] leading-relaxed resize-none overflow-y-auto bg-[#eee] focus:outline-none text-[#333] rounded-3xl"
         />
