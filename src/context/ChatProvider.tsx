@@ -3,7 +3,7 @@ import { createContext, useContext, type ReactNode } from "react";
 import { sendMessageToOpenAi } from "../service/openai";
 
 interface chatMutation {
-  mutate: UseMutateFunction<any, Error, string, unknown>;
+  mutate: UseMutateFunction<string, Error, string, unknown>;
   isPending: boolean;
   isError: boolean;
 }
